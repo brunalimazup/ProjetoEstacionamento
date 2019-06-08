@@ -1,51 +1,57 @@
 package br.com.zup.projeto;
-import java.util.Scanner;
-public class Vaga extends Estacionamento {
-	Scanner scan = new Scanner(System.in);
-	int vagas = scan.nextInt();
-	int idosos = (vagas * 5) / 100;
-	int deficiente = (vagas * 5) / 100;
-	int motos = 5;
+
+public class Vaga {
 	
-	public Vaga(int vagas, int entrada, int saída) {
-		super(vagas, entrada, saída);
-	}
+	private double vagas;
+	private double vagasIdoso;
+	private double vagasDeficientes;
+	private double vagasMotos;
 
-	public int getIdosos() {
-		return idosos;
+	public Vaga(double vagas, double vagasIdoso, double vagasDeficientes, double vagasMotos) {
+		super();
+		this.vagas = vagas;
+		this.vagasIdoso = vagasIdoso;
+		this.vagasDeficientes = vagasDeficientes;
+		this.vagasMotos = vagasMotos;
+	
 	}
-
-	public void setIdosos(int idosos) {
-		this.idosos = idosos;
+	public double getVagas() {
+		return vagas;
 	}
-
-	public int getDeficiente() {
-		return deficiente;
+	public void setVagas(double vagas) {
+		this.vagas = vagas;
 	}
-
-	public void setDeficiente(int deficiente) {
-		this.deficiente = deficiente;
+	public double getVagasIdoso() {
+		return vagasIdoso;
 	}
-
-	public int getMotos() {
-		return motos;
+	public void setVagasIdoso(double vagasIdoso) {
+		this.vagasIdoso = vagasIdoso;
 	}
-
-	public void setMotos(int motos) {
-		this.motos = motos;
+	public double getVagasDeficientes() {
+		return vagasDeficientes;
 	}
+	public void setVagasDeficientes(double vagasDeficientes) {
+		this.vagasDeficientes = vagasDeficientes;
+	}
+	public double getVagasMotos() {
+		return vagasMotos;
+	}
+	public void setVagasMotos(double vagasMotos) {
+		this.vagasMotos = vagasMotos;
+	}
+	
 	@Override
 	public String toString() {
-
-		String modelo = "";
-		modelo += "Vagas ->" + super.getVagas();
-		modelo +="\nEntrada -> " + super.getEntrada();
-		modelo += "\nSaída ->" + super.getSaída();
-		modelo += "\nIdosos -> " + this.getIdosos();
-		modelo += "\nDeficientes -> " + this.getDeficiente();
-		modelo += "\nVagas Motos -> "+ this.getMotos();
-		return  modelo;
-
-
+	 String vaga = "";
+	 
+	 vaga += "Total de Vagas = " + this.getVagas();
+	 vaga += "\nVagas idoso = " + this.getVagasIdoso();
+	 vaga += "\nVagas deficiente = " + this.getVagasDeficientes();
+	 vaga += "\nVagas de moto = " + this.getVagasMotos();
+	 
+	 return vaga;
+	 
 	}
+	
+	
 }
