@@ -1,43 +1,39 @@
 package br.com.zup.projeto;
 
+import java.sql.Date;
+
 public class ControleDeEntrada {
 	
-	    //Catraca
-	public double entrada;
-	public double saida;
-
-		public ControleDeEntrada(double entrada, double saida, double tolerancia, double precoHora,
-				double precoHoraAdicional) {
-			super();
-			this.entrada = entrada;
-			this.saida = saida;
-		}
-		public double getEntrada() {
-			return entrada;
-		}
-		
-		public void setEntrada(double entrada) {
-			this.entrada = entrada;
-		}
-		
-		public double getSaida() {
-			return saida;
-		}
-		
-		public void setSaida(double saida) {
-			this.saida = saida;
-		}
-		
-		@Override
-		public String toString () {
-			String vagas = "";
-			
-			vagas += "Hora de Entrada = " + this.getEntrada();
-			vagas += "\nHora de saída = " + this.getSaida();
-			
-			return vagas;
-			
-		}
+	public static double CalcularTempoParado(Date entrada, Date saida) {
+		double minutos = 0;
+		long milseg = saida.getTime() - entrada.getTime();
+		double seg   = milseg/1000.0;
+		minutos = seg/60.0;
+		return minutos;
 	}
+	
+	public static double valorAPagar(double minutos) {
+		double valorAPagar = 0;
 		
+		if(minutos <= 15) {
+			valorAPagar = 0;
+		}else if(minutos > 15 && minutos <= 60) {
+			valorAPagar = 10;
+		}else { 
+			valorAPagar = 10;
+			double horas = transformarMinHora(minutos);
+			horas = horas - 1;
+			valorAPagar = valorAPagar + horas * 5;
+		}
+		return valorAPagar;
+	}
+	
+	public static long transformarMinHora(double minutos) {
+		double horas = minutos/60;
+		return (long) horas;
+	}
+	
+	
+	
+}
 		
