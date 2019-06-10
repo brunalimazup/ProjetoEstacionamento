@@ -2,6 +2,8 @@ package br.com.zup.projeto;
 
 public class Vaga {
 	
+//	vagaDeficiente = (totalDeVagas*porcentagem)/100;
+//	vagaIdoso = (totalDeVagas*porcentagem)/100;
 	private double vagas;
 	private double vagasIdoso;
 	private double vagasDeficientes;
@@ -52,6 +54,4 @@ public class Vaga {
 	 return vaga;
 	 
 	}
-	
-	
 }
