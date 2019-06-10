@@ -1,6 +1,6 @@
 package br.com.zup.testeprojeto;
-
-import java.util.Scanner;
+import  java.util.Scanner;
+import br.com.zup.projeto.Estacionamento;
 
 public class TesteEstacionamento {
 	
@@ -11,6 +11,7 @@ public class TesteEstacionamento {
 		System.out.println(string);
 		Scanner scanner = new Scanner(System.in);
 		return scanner.nextInt();
+		
 	}
 
 }

@@ -1,10 +1,10 @@
 package br.com.zup.projeto;
+<<<<<<< HEAD
 import java.util.Calendar;
 import java.util.Scanner;
 
-public class Estacionamento {
 
-	public static void main(String[] args) {
+public class Estacionamento {
 		
 		Carro carro = new Carro(carroComum, carroIdoso, carroDf);
 		

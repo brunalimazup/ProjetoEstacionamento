@@ -4,6 +4,8 @@ public class Vaga {
 	
 //	vagaDeficiente = (totalDeVagas*porcentagem)/100;
 //	vagaIdoso = (totalDeVagas*porcentagem)/100;
+//	Vaga vagas = new Vaga(totalDeVagas, vagaIdoso, vagaDeficiente, vagaMoto);
+//	System.out.println(vagas);s
 	private double vagas;
 	private double vagasIdoso;
 	private double vagasDeficientes;
