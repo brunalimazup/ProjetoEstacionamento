@@ -1,11 +1,12 @@
 package br.com.zup.projeto;
-<<<<<<< HEAD
+
 import java.util.Calendar;
 import java.util.Scanner;
 
-
 public class Estacionamento {
-		
+	
+	public static void main(String[] args) {
+	
 		Carro carro = new Carro(carroComum, carroIdoso, carroDf);
 		
 		Calendar calendario = Calendar.getInstance();
@@ -72,5 +73,7 @@ public class Estacionamento {
 		
 		
 		sc.close();
-	}
+	
+}
+
 }

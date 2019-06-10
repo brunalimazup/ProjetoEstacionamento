@@ -17,7 +17,7 @@ public class Veiculo {
 	public Date getSaida() {
 		return saida;
 	}
-	public void setSaida(java.util.Date date) {
+	public void setSaida(Date date) {
 		this.saida = date;
 
 
