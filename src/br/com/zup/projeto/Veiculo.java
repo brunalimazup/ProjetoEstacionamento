@@ -19,7 +19,11 @@ public class Veiculo {
 		return saida;
 	}
 	public void setSaida(Date date) {
+
 		this.saida = (Date) date;
+
+		this.saida = date;
+
 
 
 
