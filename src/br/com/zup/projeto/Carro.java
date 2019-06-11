@@ -1,7 +1,8 @@
 package br.com.zup.projeto;
 
-public class Carro extends Veiculo{
+import java.util.Date;
 
+public class Carro extends Veiculo{
 	
 	boolean carroComum;
 	boolean carroIdoso;
@@ -15,8 +16,8 @@ public class Carro extends Veiculo{
 	public boolean isCarroComum() {
 		return carroComum;
 	}
-	public void setCarroComum(boolean carroComum) {
-		this.carroComum = carroComum;
+	public void setCarroComum(boolean date) {
+		this.carroComum = date;
 	}
 	public boolean isCarroIdoso() {
 		return carroIdoso;
@@ -30,6 +31,7 @@ public class Carro extends Veiculo{
 	public void setCarroDf(boolean carroDf) {
 		this.carroDf = carroDf;
 	}
-}
-	
+		
+	}
+
 

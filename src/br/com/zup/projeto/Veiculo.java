@@ -1,12 +1,13 @@
 package br.com.zup.projeto;
 
-import java.sql.Date;
+import java.util.Date;
+//import java.sql.Date;
 
 public class Veiculo {
 
 
 	private Date entrada;
-	private Date saida;
+	private static Date saida;
 
 	public Date getEntrada() {
 		return entrada;
@@ -14,11 +15,11 @@ public class Veiculo {
 	public void setEntrada(Date entrada) {
 		this.entrada = entrada;
 	}
-	public Date getSaida() {
+	public static Date getSaida() {
 		return saida;
 	}
-	public void setSaida(java.util.Date date) {
-		this.saida = date;
+	public void setSaida(Date date) {
+		this.saida = (Date) date;
 
 
 
