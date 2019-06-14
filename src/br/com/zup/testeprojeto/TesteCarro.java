@@ -61,6 +61,7 @@ public class TesteCarro {
 			Carro carroComum = new Carro(modelo, placa, cor, true, false, false);
 			System.out.println(carroComum);
 			return carroComum;
+
 		} else if (resposta.equalsIgnoreCase("Idoso")) {
 			Carro carroIdoso = new Carro(modelo, placa, cor, false, true, false);
 			System.out.println(carroIdoso);

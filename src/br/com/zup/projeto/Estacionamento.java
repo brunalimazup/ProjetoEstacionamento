@@ -34,7 +34,7 @@ public class Estacionamento {
 		return calendarioHorarioSaida;
 
 	}
-
+	
 	public static String digiteString(String string) {
 		System.out.println(string);
 		Scanner scan = new Scanner(System.in);
