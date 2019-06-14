@@ -45,7 +45,7 @@ public class TesteCarro {
 		String resposta = scan.next();
 
 		if (resposta.equalsIgnoreCase("Comum")) {
-			Carro carro = new Carro(true, false, false);
+			Carro carro = new Carro(resposta, resposta, null, null, resposta, true, false, false);
 			return carro;
 		} else if (resposta.equalsIgnoreCase("Idoso")) {
 			Carro carro = new Carro(false, true, false);

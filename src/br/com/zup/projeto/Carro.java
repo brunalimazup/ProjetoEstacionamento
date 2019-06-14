@@ -7,12 +7,16 @@ public class Carro extends Veiculo{
 	boolean carroComum;
 	boolean carroIdoso;
 	boolean carroDf;
-	public Carro(boolean carroComum, boolean carroIdoso, boolean carroDf) {
+	
+	public Carro(String cor, String placa, Date entrada, Date saida, String modelo, boolean carroComum,
+			boolean carroIdoso, boolean carroDf) {
+		super(cor, placa,modelo, entrada, saida);
 		this.carroComum = carroComum;
 		this.carroIdoso = carroIdoso;
 		this.carroDf = carroDf;
-		
 	}
+	
+	
 	public boolean isCarroComum() {
 		return carroComum;
 	}
