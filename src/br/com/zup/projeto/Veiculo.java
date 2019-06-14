@@ -1,32 +1,41 @@
 package br.com.zup.projeto;
 
-import java.util.Date;
-//import java.sql.Date;
-
 public class Veiculo {
-
-
-	private Date entrada;
-	private static Date saida;
-
-	public Date getEntrada() {
-		return entrada;
+	
+	String modelo;
+	String placa;
+	String cor;
+	
+	public Veiculo(String modelo, String placa, String cor) {
+		super();
+		this.modelo = modelo;
+		this.placa = placa;
+		this.cor = cor;
+		
 	}
-	public void setEntrada(Date entrada) {
-		this.entrada = entrada;
+
+	public String getModelo() {
+		return modelo;
 	}
-	public static Date getSaida() {
-		return saida;
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
-	public void setSaida(Date date) {
 
-		this.saida = (Date) date;
-
-		this.saida = date;
-
-
-
-
-
+	public String getPlaca() {
+		return placa;
 	}
-}
+
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	} 
+	
+	}

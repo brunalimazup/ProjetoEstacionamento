@@ -1,77 +1,52 @@
 package br.com.zup.projeto;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Vaga {
 
-	private double vagas;
-	private double vagasIdoso;
-	private double vagasDeficientes;
-	private double vagasMotos;
-	private double vagasComum;
+	private int vagas;
+	private int vagasIdoso;
+	private int vagasDeficientes;
+	private int vagasMotos;
+	private int vagasComuns;
 
-	List<Vaga> listaDeVagas = new ArrayList<Vaga>();
-
-	public Vaga(double vagas, double vagasIdoso, double vagasDeficientes, double vagasMotos, double vagasComum) {
+	public Vaga(int vagas, int vagasIdoso, int vagasDeficientes, int vagasMotos, int vagasComuns) {
 		super();
 		this.vagas = vagas;
 		this.vagasIdoso = vagasIdoso;
 		this.vagasDeficientes = vagasDeficientes;
 		this.vagasMotos = vagasMotos;
-		this.vagasComum = vagasComum;
+		this.vagasComuns = vagasComuns;
 	}
 
-	public double getVagas() {
+	public int getVagas() {
 		return vagas;
 	}
-
-	public void setVagas(double vagas) {
+	public void setVagas(int vagas) {
 		this.vagas = vagas;
 	}
-
-	public double getVagasIdoso() {
+	public int getVagasIdoso() {
 		return vagasIdoso;
 	}
-
-	public void setVagasIdoso(double vagasIdoso) {
+	public void setVagasIdoso(int vagasIdoso) {
 		this.vagasIdoso = vagasIdoso;
 	}
-
-	public double getVagasDeficientes() {
+	public int getVagasDeficientes() {
 		return vagasDeficientes;
 	}
-
-	public void setVagasDeficientes(double vagasDeficientes) {
+	public void setVagasDeficientes(int vagasDeficientes) {
 		this.vagasDeficientes = vagasDeficientes;
 	}
-
-	public double getVagasMotos() {
+	public int getVagasMotos() {
 		return vagasMotos;
 	}
-
-	public void setVagasMotos(double vagasMotos) {
+	public void setVagasMotos(int vagasMotos) {
 		this.vagasMotos = vagasMotos;
 	}
-
-	public double getVagasComum() {
-		return vagasComum;
+	public int getVagasComuns() {
+		return vagasComuns;
+	}
+	public void setVagasCom(int vagasComum) {
+		this.vagasComuns = vagasComum;
 	}
 
-	public void setVagasComum(double vagasComum) {
-		this.vagasComum = vagasComum;
-	}
-
-	public List<Vaga> listaDeVagas(List<Vaga> vagas, double vagaIdoso, double vagaDeficiente, double vagaMoto,
-			double VagaComum) {
-		for (int i = 0; i < vagaIdoso; i++) {
-			
-			
-		}
-		return null;
-	}
-
-	@Override
 	public String toString() {
 		String vaga = "";
 
@@ -79,7 +54,7 @@ public class Vaga {
 		vaga += "\nVagas idoso = " + this.getVagasIdoso();
 		vaga += "\nVagas deficiente = " + this.getVagasDeficientes();
 		vaga += "\nVagas de moto = " + this.getVagasMotos();
-		vaga += "\nVagas comuns = " + this.getVagasComum();
+		vaga += "\nVagas comuns = " + this.getVagasComuns();
 
 		return vaga;
 

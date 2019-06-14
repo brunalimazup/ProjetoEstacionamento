@@ -1,86 +1,43 @@
 package br.com.zup.projeto;
-
-import java.util.Calendar;
 import java.util.Scanner;
+import java.util.Calendar;
 
 public class Estacionamento {
 
-	public static void main(String[] args) {
+	public static Calendar perguntarHorarioEntrada() {
 
+		Calendar calendarioHorarioEntrada = Calendar.getInstance();
 
+		calendarioHorarioEntrada.set(Calendar.HOUR_OF_DAY,Integer.parseInt(digiteString("\nHorario de Entrada do veiculo ->")));
 
+		calendarioHorarioEntrada.set(Calendar.MINUTE, Integer.parseInt(digiteString("\nOs minutos -> ")));
+
+		calendarioHorarioEntrada.set(Calendar.SECOND, Integer.parseInt(digiteString("\nOs segundos -> ")));
+		
+		
+		System.out.println("\nO horario que você entrou foi -> " + calendarioHorarioEntrada.getTime());
+		return calendarioHorarioEntrada;
+	}
+
+	public static Calendar perguntarHorarioSaida() {
+
+		Calendar calendarioHorarioSaida = Calendar.getInstance();
+
+		calendarioHorarioSaida.set(Calendar.HOUR_OF_DAY, Integer.parseInt(digiteString("\nHorario de Saida do veiculo -> ")));
+
+		calendarioHorarioSaida.set(Calendar.MINUTE, Integer.parseInt(digiteString("\nOs minutos -> ")));
+
+		calendarioHorarioSaida.set(Calendar.SECOND, Integer.parseInt(digiteString("\nOs segundos -> ")));
+
+		
+		System.out.println("\nO horario que você saiu foi -> " + calendarioHorarioSaida.getTime());
+		return calendarioHorarioSaida;
 
 	}
-}
 
-
-Carro carro = new Carro(carroComum, carroIdoso, carroDf);
-
-Calendar calendario = Calendar.getInstance();
-calendario.set(Calendar.DAY_OF_MONTH, 1);
-calendario.set(Calendar.HOUR_OF_DAY, 10);
-calendario.set(Calendar.MINUTE, 20);
-
-carro.setCarroComum (calendario.getTime());
-System.out.println("O carro entrou as " + carro.getEntrada());
-
-Calendar calendario2 = Calendar.getInstance();
-calendario2.set(Calendar.DAY_OF_MONTH, 1);
-calendario2.set(Calendar.HOUR_OF_DAY, 10);
-calendario2.set(Calendar.MINUTE, 36);
-carro.setSaida(calendario2.getTime());
-System.out.println("O carro saiu as " + carro.getSaida());
-
-ControleDeEntrada controle = new ControleDeEntrada();
-long tempo = (long)ControleDeEntrada.CalcularTempoParado(carro.getEntrada(),
-		carro.getSaida());
-
-System.out.println("O carro ficou " + tempo + " minutos");
-double valorPago = ControleDeEntrada.valorAPagar(tempo);
-System.out.println("Foi pago o valor de " + valorPago);
-
-
-Moto moto = new Moto();
-Scanner sc = new Scanner(System.in);
-System.out.println("Que dia voce entrou? ");
-byte dia = sc.nextByte();
-System.out.println("Que hora voce entrou? ");
-byte hora = sc.nextByte();
-System.out.println("Que min voce entrou? ");
-byte min = sc.nextByte();
-
-Calendar calendarioMoto = Calendar.getInstance();
-calendarioMoto.set(Calendar.DAY_OF_MONTH, dia);
-calendarioMoto.set(Calendar.HOUR_OF_DAY, hora);
-calendarioMoto.set(Calendar.MINUTE, min);
-
-moto.setEntrada(calendarioMoto.getTime());
-System.out.println("A moto entrou as " + moto.getEntrada());
-
-System.out.println("Que dia voce saiu? ");
-dia = sc.nextByte();
-System.out.println("Que hora voce saiu? ");
-hora = sc.nextByte();
-System.out.println("Que min voce saiu? ");
-min = sc.nextByte();
-
-calendarioMoto.set(Calendar.DAY_OF_MONTH, dia);
-calendarioMoto.set(Calendar.HOUR_OF_DAY, hora);
-calendarioMoto.set(Calendar.MINUTE, min);
-
-moto.setSaida(calendarioMoto.getTime());
-System.out.println("A moto saiu as " + moto.getSaida());
-
-tempo = (long)ControleDeEntrada.calcularTempoParado(moto.getEntrada(), 
-		moto.getSaida());
-System.out.println("A Moto ficou " + tempo + " minutos");
-valorPago = ControleDeEntrada.(tempo);
-System.out.println("Foi pago o valor de " + valorPago);
-
-
-
-sc.close();
-
-}
-
+	public static String digiteString(String string) {
+		System.out.println(string);
+		Scanner scan = new Scanner(System.in);
+		return scan.nextLine();
+	}
 }
