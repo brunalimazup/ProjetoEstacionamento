@@ -1,4 +1,6 @@
 package br.com.zup.projeto;
+import java.util.List;
+import java.util.ArrayList;
 public class Vaga {
 
 	private int vagas;
@@ -8,7 +10,6 @@ public class Vaga {
 	private int vagasComuns;
 
 	public Vaga(int vagas, int vagasIdoso, int vagasDeficientes, int vagasMotos, int vagasComuns) {
-		super();
 		this.vagas = vagas;
 		this.vagasIdoso = vagasIdoso;
 		this.vagasDeficientes = vagasDeficientes;

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ControleDeEntrada {
 
-	public static double CalcularTempoParado(Date entrada, Date saida) {
+	public static double calcularTempoParado(Date entrada, Date saida) {
 		double minutos = 0;
 		long milseg = entrada.getTime() - saida.getTime();
 		double seg   = milseg/1000.0;
